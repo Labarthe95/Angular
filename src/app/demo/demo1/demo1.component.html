@@ -1,0 +1,20 @@
+<h3>Property Bindings</h3>
+<ul>
+    <li>
+        <h5>One-way Binding</h5>
+        <p>{{maProp}} tout le monde</p>
+    </li>
+    <li>
+        <h5>Two-ways binding</h5>
+        <input type="text" [(ngModel)]="maProp">
+    </li>
+</ul>
+<hr>
+<h3>Event Binding</h3>
+<button (click)="maMethode()">Click ici</button>
+<!-- <label (mouseover)="maMethode()">Passe ici</label> -->
+<hr>
+<h3>Attribute Binding</h3>
+<p>Contenu de ma prop: {{maProp2}}</p>
+<button (click)="plus()" [disabled]="maProp2 >= 9">+</button> &nbsp;
+<button (click)="moins()" [disabled]="maProp2 <= 0">-</button>
