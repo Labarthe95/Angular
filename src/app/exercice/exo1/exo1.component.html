@@ -1,0 +1,8 @@
+<h3>Chronomètre</h3>
+<p>Temps écoulé : {{temps | nbToTimer}}</p>
+
+<p>
+    <button (click)="start()" [ngClass]="{'inactif' : timer }" [disabled]="timer">Start</button>
+    <button (click)="pause()" [ngClass]="{'inactif' : !timer }" [disabled]="!timer">Pause</button>
+    <button (click)="reset()" [ngClass]="{'inactif' : !temps }" [disabled]="!temps">Reset</button>
+</p>

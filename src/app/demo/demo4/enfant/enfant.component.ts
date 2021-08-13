@@ -17,7 +17,7 @@ export class EnfantComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  //Output Méthode qui fait en sorte d'afficher le texte qui sera mis dans ma propriété
+  //Output Méthode qui déclenche l'événement tout en mettant texte introduit comme param de l'event
     maMethode() {
     this.monEvent.emit(this.monTexte)
   }
