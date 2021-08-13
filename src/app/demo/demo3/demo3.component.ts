@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo3.component.scss']
 })
 export class Demo3Component implements OnInit {
-
+  //NgStyle
   currentStyle : any;
 
   test : boolean = true
@@ -15,13 +15,25 @@ export class Demo3Component implements OnInit {
   bold : boolean = false;
   size : boolean = false;
 
+  //NgClass
   class : boolean = false;
 
+  //NgIf
+  isToggled : boolean = false;
+
+  //NgFor
+  liste : string[] = ["Pokemon", "Final fantasy", "Street Fighter", "Kingdom Hearts", "Duke Nukem 3D"]
   constructor() { }
 
+  //NgSwitch
+  maProp : string = ""
+
+
   ngOnInit(): void {
+    //NgStyle, donne le style de base quand j'ouvre ma page
     this.setCurrentStyle()
   }
+  //NgStyle
   setCurrentStyle() {
     this.currentStyle= {
       'font-style' : this.italic ? 'italic' : 'normal',
@@ -42,8 +54,13 @@ export class Demo3Component implements OnInit {
     this.size = !this.size
     this.setCurrentStyle()
   }
-  
+  //NgClass
   switchClass() {
     this.class = !this.class
+  }
+
+  //NgIf
+  Toggled() {
+    this.isToggled = !this.isToggled
   }
 }

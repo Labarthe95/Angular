@@ -1,0 +1,15 @@
+<!-- Input: afficher les propriétés déclarées dans l'enfant -->
+<h4>{{title}}</h4>
+<div style="border: 1px black solid;">
+    <p>
+        {{contenu}}
+    </p>
+</div>
+<hr>
+<!-- Output Créer un input avec binding two-ways pour que le msg que je mets s'intègre dans la prop -->
+<input type="text" [(ngModel)]="monTexte">
+<!-- En cliquant j'appelle la méthode qui déclenche event avec pour param ce que j'ai mis en msg -->
+<button (click)="maMethode()">Click ici</button>
+<hr>
+<!-- Pour afficher ce qui est mis dans le parent -->
+<ng-content></ng-content>

@@ -1,0 +1,18 @@
+<h3>Demo @Input/@Output</h3>
+<p>Je suis le parent</p>
+<!-- Input: Appel l'enfant par sélecteur pour que l'enfant s'affiche sur page parent -->
+<!-- Définir les infos reçues dans les paramètres enfants -->
+<!-- Soit en écrivant un msg en toutes lettres, soit en faisant appel à une prop définie par le parent -->
+<!-- Output: (monEvent)="reponseduChildren($event)" (monEvent) écoute l'évènement et quand il est déclenché dans enfant 
+    -> appel de la méthode + mettre param event enfant dans param méthode parent appelée -->
+<app-enfant 
+    title="Titre du composant Enfant"
+    [contenu]="texte"
+    (monEvent)="reponseDuChildren($event)">
+    <!-- NgContent -->
+    <div>
+        <p>Contenu qui vient du parent</p>
+    </div>
+</app-enfant>
+<!-- Output: par le binding, afficher prop du parent contenant le msg de l'enfant -->
+<p>En attente de l'enfant : {{messageDuChildren}}</p>
